@@ -28,7 +28,10 @@ var Section = module.exports = React.createClass({
         var list = todoList.map(function(item, i) {
           return (
             <li key={item.id} className={item.done ? 'done' : ''}>
-            <input type="checkbox" checked={item.done} onChange={this.toggle.bind(this, item.id)}/>
+            <input
+              type="checkbox"
+              checked={item.done}
+              onChange={this.toggle.bind(this, item.id)}/>
             {item.text}&nbsp;
             <a onClick={this.destroy.bind(this, item.id)}>x</a>
             </li>
