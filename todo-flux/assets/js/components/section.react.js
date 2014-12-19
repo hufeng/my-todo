@@ -24,25 +24,26 @@ var Section = module.exports = React.createClass({
       this.props.onToggleAll();
     },
     render: function() {
-        var todoList = this.state.todoList;
-        var list = todoList.map(function(item, i) {
-          return (
-            <li key={item.id} className={item.done ? 'done' : ''}>
-            <input
-              type="checkbox"
-              checked={item.done}
-              onChange={this.toggle.bind(this, item.id)}/>
-            {item.text}&nbsp;
-            <a onClick={this.destroy.bind(this, item.id)}>x</a>
-            </li>
-          );
-        }, this);
-
         return (
           <section id="main">
             <input id="toggle-all" type="checkbox" onChange={this.toggleAll}/>
             <label htmlFor="toggle-all">Mark all as complete</label>
-            <ul id="todo-list">{list}</ul>
+            <ul id="todo-list">
+            {
+              this.state.todoList.map(function(item, i) {
+                return (
+                  <li key={item.id} className={item.done ? 'done' : ''}>
+                    <input
+                    type="checkbox"
+                    checked={item.done}
+                    onChange={this.toggle.bind(this, item.id)}/>
+                    { item.text + " "}
+                    <a onClick={this.destroy.bind(this, item.id)}>x</a>
+                  </li>
+                );
+              }, this)
+            }
+            </ul>
           </section>
         );
     }
