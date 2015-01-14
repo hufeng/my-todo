@@ -1,0 +1,22 @@
+{
+  "name": "todo-immutable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "immutable",
+    "react"
+  ],
+  "author": "hufeng",
+  "license": "ISC",
+  "dependencies": {
+    "immutable": "^3.6.2",
+    "react": "^0.12.2"
+  },
+  "devDependencies": {
+    "jsx-loader": "^0.12.2"
+  }
+}
