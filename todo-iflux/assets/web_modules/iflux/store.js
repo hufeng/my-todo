@@ -40,11 +40,14 @@ Store.prototype.get = function (path) {
  */
 Store.prototype.cursor = function () {
   var onStoreChange = function (nextStore, preStore, cursorPath) {
+    console.debug('cursorPath->', cursorPath);
+    console.debug('nextStore->', nextStore.toString());
+
     if (preStore != this.store) {
       throw new Error('attemped to alter expired data.');
     }
     this.store = nextStore;
-    msg.emit('onStoreChange', this.store, cursorPath);
+    msg.emit('onStoreChange', nextStore, cursorPath);
 
   }.bind(this);
 

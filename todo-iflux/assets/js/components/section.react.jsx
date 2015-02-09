@@ -1,6 +1,6 @@
 var React = require('react');
-var appStore = require('../todo-store');
-var PureMixin = require('fine/mixins/pure-mixin');
+var msg = require('iflux/msg');
+var PureMixin = require('iflux/mixins/pure-mixin');
 
 
 
@@ -11,23 +11,16 @@ var Section = module.exports = React.createClass({
   mixins: [PureMixin],
 
   toggle(id) {
-    appStore.cursor().updateIn(['todo', id, 'done'], function(done) {
-      return !done;
-    })
+    msg.emit('todoListToggle', id);
   },
 
   destroy(id) {
-    appStore.cursor().deleteIn(['todo', id]);
+    msg.emit('destroyTodoList', id);
   },
 
   toggleAll(e) {
     var state = e.target.checked;
-
-    appStore.cursor().get('todo').withMutations(function(cursor) {
-      cursor.forEach(function(_, k) {
-        cursor.setIn([k, 'done'], state);
-      })
-    });
+    msg.emit('todoListToggleAll', state);
   },
 
 

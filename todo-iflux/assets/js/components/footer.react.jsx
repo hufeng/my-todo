@@ -1,5 +1,5 @@
 var React = require('react');
-var PureMixin = require('fine/mixins/pure-mixin');
+var PureMixin = require('iflux/mixins/pure-mixin');
 
 
 /**
