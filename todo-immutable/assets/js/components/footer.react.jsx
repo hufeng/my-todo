@@ -1,14 +1,16 @@
 var React = require('react');
-var immutableMixin = require('../mixins/immutableHelp');
+var PureMixin = require('fine/mixins/pure-mixin');
 
 
 /**
  * footer
  */
 var Footer = module.exports = React.createClass({
-  mixins: [immutableMixin],
+  mixins: [PureMixin],
 
-  render: function() {
+  render() {
+    console.log('footer rendering....');
+
     return (
       <footer id="info">
         <p>Double-click to edit a todo</p>

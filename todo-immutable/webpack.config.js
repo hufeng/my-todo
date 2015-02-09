@@ -10,11 +10,12 @@ module.exports = {
         filename: 'bundle.js'
     },
     resolve: {
-      extensions: ['', '.js', '.jsx']
+      extensions: ['', '.js', '.jsx'],
+      modulesDirectories: ['', 'web_modules', 'node_modules']
     },
     module: {
         loaders: [
-          {test: /\.jsx$/, loader: 'jsx-loader'}
+          {test: /\.[js|jsx]/, loader: 'jsx-loader?harmony'}
         ]
     },
     plugins: [
