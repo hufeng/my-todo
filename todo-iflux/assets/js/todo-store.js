@@ -1,8 +1,6 @@
 var Immutable = require('immutable');
-
 var Store = require('iflux/store');
 var msg = require('iflux/msg');
-
 
 
 /**
@@ -20,14 +18,12 @@ var uuid = (function() {
  * 整个应用的数据中心
  *
  */
-var appStore = module.exports = new Store({
+var appStore = module.exports = Store({
   todo: {},
   inputValue: ''
 });
 
-
 msg.on('inputChange', (value) => {
-  console.log(value);
   appStore.cursor().set('inputValue', value);
 });
 

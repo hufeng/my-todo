@@ -1,6 +1,6 @@
 var React = require('react');
 var msg = require('iflux/msg');
-var PureMixin = require('iflux/mixins/pure-mixin');
+var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
 
 
 
@@ -8,7 +8,7 @@ var PureMixin = require('iflux/mixins/pure-mixin');
  * 封装section组件
  */
 var Section = module.exports = React.createClass({
-  mixins: [PureMixin],
+  mixins: [PureRenderMixin],
 
   toggle(id) {
     msg.emit('todoListToggle', id);
@@ -20,6 +20,7 @@ var Section = module.exports = React.createClass({
 
   toggleAll(e) {
     var state = e.target.checked;
+    
     msg.emit('todoListToggleAll', state);
   },
 

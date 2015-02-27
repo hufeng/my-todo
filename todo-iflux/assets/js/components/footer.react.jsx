@@ -1,12 +1,12 @@
 var React = require('react');
-var PureMixin = require('iflux/mixins/pure-mixin');
+var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
 
 
 /**
  * footer
  */
 var Footer = module.exports = React.createClass({
-  mixins: [PureMixin],
+  mixins: [PureRenderMixin],
 
   render() {
     console.log('footer rendering....');

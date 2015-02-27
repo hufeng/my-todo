@@ -1,7 +1,6 @@
 var React = require('react');
+var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
 var msg = require('iflux/msg');
-var PureMixin = require('iflux/mixins/pure-mixin');
-
 
 
 /**
@@ -9,7 +8,7 @@ var PureMixin = require('iflux/mixins/pure-mixin');
  */
 var Header = module.exports = React.createClass({
 
-  mixins: [PureMixin],
+  mixins: [PureRenderMixin],
 
 
   /**

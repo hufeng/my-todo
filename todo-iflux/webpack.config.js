@@ -7,7 +7,7 @@ module.exports = {
     entry: './assets/js/app.jsx',
     output: {
         path: './build',
-        filename: 'bundle.js'
+        filename: 'bundle.[chunkhash].js'
     },
     resolve: {
       extensions: ['', '.js', '.jsx'],
@@ -21,7 +21,6 @@ module.exports = {
     plugins: [
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify('production')
-      }),
-      new webpack.NewWatchingPlugin()
+      })
     ]
 };
