@@ -1,5 +1,5 @@
 var React = require('react');
-var msg = require('iflux/msg');
+var {msg} = require('iflux');
 var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
 
 

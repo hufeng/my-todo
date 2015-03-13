@@ -7,11 +7,10 @@ module.exports = {
     entry: './assets/js/app.jsx',
     output: {
         path: './build',
-        filename: 'bundle.[chunkhash].js'
+        filename: 'bundle.js'
     },
     resolve: {
-      extensions: ['', '.js', '.jsx'],
-      modulesDirectories: ['', 'web_modules', 'node_modules']
+      extensions: ['', '.js', '.jsx']
     },
     module: {
         loaders: [

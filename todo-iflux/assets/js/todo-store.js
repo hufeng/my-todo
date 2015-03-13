@@ -1,6 +1,5 @@
 var Immutable = require('immutable');
-var Store = require('iflux/store');
-var msg = require('iflux/msg');
+var {Store, msg} = require('iflux');
 
 
 /**
