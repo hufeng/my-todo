@@ -6,7 +6,8 @@ var Footer = require('./components/footer.react');
 //数据中心
 var appStore = require('./todo-store');
 //将immutable数据minxin进入app
-var {StoreMixin} = require('iflux');
+var StoreMixin = require('iflux').mixins.StoreMixin;
+
 
 
 /**
