@@ -13,9 +13,9 @@
   "author": "hufeng",
   "license": "ISC",
   "dependencies": {
-    "iflux": "^1.0.2",
-    "react": "^0.12.2",
-    "immutable": "^3.6.4"
+    "iflux": "^1.0.4",
+    "immutable": "^3.6.4",
+    "react": "^0.12.2"
   },
   "devDependencies": {
     "jsx-loader": "^0.12.2"
