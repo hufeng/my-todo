@@ -1,7 +1,7 @@
 var React = require('react');
 var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
 var {msg} = require('iflux');
-
+var constant = require('../const');
 
 /**
  * 封装header
@@ -15,7 +15,7 @@ var Header = module.exports = React.createClass({
    * 输入框change
    */
   onChange(e) {
-    msg.emit('inputChange', e.target.value);
+    msg.emit(constant.INPUT_CHANGE, e.target.value);
   },
 
   /**
@@ -26,7 +26,7 @@ var Header = module.exports = React.createClass({
     var value = this.props.data;
 
     if (keyCode == 13 && value) {
-      msg.emit('saveTodo', value);
+      msg.emit(constant.TODO_SAVE, value);
     }
   },
 
