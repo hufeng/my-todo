@@ -1,0 +1,26 @@
+{
+  "name": "todo-koa",
+  "version": "1.0.0",
+  "description": "todo koa demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "todo",
+    "koa",
+    "react"
+  ],
+  "author": "hufeng",
+  "license": "ISC",
+  "dependencies": {
+    "iflux": "^1.0.7",
+    "immutable": "^3.7.2",
+    "koa": "^0.19.1",
+    "koa-middlewares": "^3.0.0",
+    "react": "^0.13.2"
+  },
+  "devDependencies": {
+    "jsx-loader": "^0.13.2"
+  }
+}
