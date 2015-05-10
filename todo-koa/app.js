@@ -5,6 +5,14 @@ var routers = require('./routers');
 
 var app = koa();
 
+
+app.use(function *(next) {
+  var start = new Date;
+  yield next;
+  this.set('X-Response-Time', new Date() - start);
+});
+
+
 app.use(middlewares.logger());
 
 middlewares.ejs(app, {
