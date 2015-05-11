@@ -1,15 +1,16 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Header from './components/header.react';
 import Section from './components/section.react';
 import Footer from './components/footer.react';
-
+import {msg} from 'iflux';
 //数据中心
 import store from './todo-store';
 
 /**
  * TodoApp
  */
-class TodoApp extends React.Component {
+class TodoApp extends Component {
+
   render() {
     var store = this.props.store;
 

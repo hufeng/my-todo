@@ -1,13 +1,11 @@
-import React from 'react/addons';
+import React from 'react';
+import PureComponent from './pure-component';
 
 
 /**
  * footer
  */
-export default class Footer extends React.Component {
-  shouldComponentUpdate(nextProps, nextState) {
-    return React.addons.PureRenderMixin.shouldComponentUpdate(nextProps, nextState);
-  }
+export default class Footer extends PureComponent {
 
   render() {
     console.log('footer rendering....');

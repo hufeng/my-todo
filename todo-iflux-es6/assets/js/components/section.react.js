@@ -1,11 +1,15 @@
-import React from 'react/addons';
-import {TODO_LIST_TOGGLE, TODO_LIST_DESTROY, TODO_LIST_TOGGLE_ALL} from '../const';
+import React from 'react';
+import PureComponent from './pure-component';
+import {
+  TODO_LIST_TOGGLE,
+  TODO_LIST_DESTROY,
+  TODO_LIST_TOGGLE_ALL} from '../const';
 import {msg} from 'iflux';
 
 /**
  * 封装section组件
  */
-export default class Section extends React.Component {
+export default class Section extends PureComponent {
 
   /**
    * virtualdom
@@ -46,10 +50,7 @@ export default class Section extends React.Component {
   }
 
   toggleAll(e) {
-    var state = e.target.checked;
+    let state = e.target.checked;
     msg.emit(TODO_LIST_TOGGLE_ALL, state);
   }
-};
-
-
-Section.prototype.shouldComponentUpdate = React.addons.PureRenderMixin.shouldComponentUpdate;
+}
